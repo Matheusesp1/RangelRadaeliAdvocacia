@@ -8,10 +8,10 @@
 
 - **Home:** Apresentação Inicial;
 - **Sobre mim:** um pouco sobre minha trajetória e meu estado atual;
-- **Projetos:** Alguns projetos realizados recentes;
-- **Conhecimentos:** Areas de conhecimento;
-- **Fale comigo:** Área com meios para contato comigo;
-- **Redes:** teste.
+- **Diferencias:** Diferencias do trabalho;
+- **Areas de atuação:** Areas de conhecimento;
+- **Multidisciplinar:** Atuação em diversas areas;
+- **Contato** Área com meios para contato comigo;
 
 ## Tecnologias utilizadas:
 
