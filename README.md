@@ -7,7 +7,7 @@
 ##  O site é composto por:
 
 - **Home:** Apresentação Inicial;
-- **Sobre mim:** Falo um pouco sobre minha trajetória e meu estado atual;
+- **Sobre mim:** um pouco sobre minha trajetória e meu estado atual;
 - **Projetos:** Alguns projetos realizados recentes;
 - **Conhecimentos:** Areas de conhecimento;
 - **Fale comigo:** Área com meios para contato comigo;
