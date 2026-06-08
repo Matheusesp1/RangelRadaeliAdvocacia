@@ -335,7 +335,7 @@ p:last-child { margin-bottom: 0; }
   pointer-events: none;
 }
 
-/* Linha vertical decorativa */
+/* Linha vertical decorativa
 .hero::after {
   content: '';
   position: absolute;
@@ -344,7 +344,7 @@ p:last-child { margin-bottom: 0; }
   height: 100%;
   background: linear-gradient(to bottom, transparent, rgba(184,145,97,0.15), transparent);
   pointer-events: none;
-}
+} */
 
 .hero__inner {
   display: grid;
@@ -479,6 +479,7 @@ p:last-child { margin-bottom: 0; }
   margin-left: auto;
   flex-shrink: 0;
   transition: stroke var(--transition);
+  display: none; /* Esconde a seta por padrão */
 }
 
 .hero__panel-item:hover .arrow { stroke: var(--color-gold); }
