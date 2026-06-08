@@ -292,6 +292,17 @@ p:last-child { margin-bottom: 0; }
   border-top: 1px solid var(--color-border);
 }
 
+
+/* Fix menu mobile iOS */
+.nav-mobile {
+  position: relative;
+  z-index: 99;
+}
+
+.nav-mobile.is-open {
+  display: block !important;
+}
+
 .nav-mobile.is-open { display: block; }
 
 .nav-mobile__list { padding: var(--space-sm) 0; }
