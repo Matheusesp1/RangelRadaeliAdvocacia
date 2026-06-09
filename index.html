@@ -36,18 +36,20 @@
         <a
           href="#hero"
           class="logo"
-          aria-label="Rangel Radaeli Advocacia - Início"
+          aria-label="Rangel Radaeli Advocacia – Início"
         >
-          <img
-            src="assets/images/LogoRR.png"
-             alt="Rangel Radaeli Advocacia"
-            class="logo__img"
-          />
-
-          <div class="logo__text">
-            <span class="logo__name">Rangel Radaeli</span>
-            <!-- <br/> -->
-            <span class="logo__sub">ADVOCACIA</span>
+          <div class="logo__wrapper">
+            <div class="logo__top">
+              <img src="assets/images/LogoRR.png" alt="" class="logo__icon" />
+              <div class="logo__text">
+                <span class="logo__name">Rangel Radaeli</span>
+                <span class="logo__sub">
+                  <span class="logo__line"></span>
+                  ADVOCACIA
+                  <span class="logo__line"></span>
+                </span>
+              </div>
+            </div>
           </div>
         </a>
 
@@ -180,16 +182,14 @@
             <ul class="hero__panel-list">
               <li class="hero__panel-item">
                 <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  aria-hidden="true"
-                >
-                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                  <polyline points="9 22 9 12 15 12 15 22" />
-                </svg>
-                <span>Direito Imobiliário</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                    <line x1="10" y1="9" x2="8" y2="9"/>
+                  </svg>
+                <span>Consultoria e Contratos </span>
                 <svg
                   class="arrow"
                   viewBox="0 0 24 24"
@@ -214,7 +214,47 @@
                   />
                   <polyline points="14 2 14 8 20 8" />
                 </svg>
-                <span>Contratos Empresariais</span>
+                <span>Cobranças e Recuperação de Crédito</span>
+                <svg
+                  class="arrow"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  aria-hidden="true"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </li>
+              <li class="hero__panel-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2v20"/>
+                <path d="M3 9h18"/>
+                <path d="M3 9l4 8a4 4 0 0 0 8 0l4-8"/>
+                <path d="M7 9l-4 8"/>
+                <path d="M17 9l4 8"/>
+            </svg>
+                </svg>
+                <span>Contencioso Estratégico</span>
+                <svg
+                  class="arrow"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  aria-hidden="true"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </li>
+              <li class="hero__panel-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+                <span>Direito do Trabalho </span>
                 <svg
                   class="arrow"
                   viewBox="0 0 24 24"
@@ -234,36 +274,10 @@
                   stroke-width="1.5"
                   aria-hidden="true"
                 >
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                  <path
-                    d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"
-                  />
+                  <circle cx="11" cy="11" r="8" />
+                  <path d="m21 21-4.35-4.35" />
                 </svg>
-                <span>Direito Societário</span>
-                <svg
-                  class="arrow"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  aria-hidden="true"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </li>
-              <li class="hero__panel-item">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  aria-hidden="true"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M12 8v4l3 3" />
-                </svg>
-                <span>Planejamento Patrimonial</span>
+                <span>Atuação Multidisciplinar </span>
                 <svg
                   class="arrow"
                   viewBox="0 0 24 24"
@@ -388,9 +402,10 @@
             <span class="section-tag section-tag--light">O que fazemos</span>
             <h2 class="section-title section-title--light">Áreas de Atuação</h2>
             <p class="areas__subtitle">
-              Com foco em Contratos, Direito Societário, Direito Imobiliário e
-              Contencioso Estratégico, atuamos com precisão técnica e visão de
-              negócio.
+              Com atuação estratégica em Contratos, Direito do Trabalho,
+              Cobranças e Recuperação de Crédito e Contencioso Estratégico,
+              combinamos precisão técnica e visão de negócio para entregar
+              soluções jurídicas que protegem e impulsionam seus interesses.
             </p>
           </div>
 
@@ -408,10 +423,11 @@
                   <polyline points="9 22 9 12 15 12 15 22" />
                 </svg>
               </div>
-              <h3 class="area-card__title">Direito Imobiliário</h3>
+              <h3 class="area-card__title">Consultoria e Contratos</h3>
               <p class="area-card__desc">
-                Segurança jurídica em todas as etapas de empreendimentos e
-                projetos imobiliários.
+                Elaboração, análise e revisão de contratos.<br />
+                Estruturação de instrumentos jurídicos. <br />
+                Consultoria preventiva.
               </p>
               <span class="area-card__link">Saiba mais →</span>
             </article>
@@ -433,10 +449,14 @@
                   <line x1="16" y1="17" x2="8" y2="17" />
                 </svg>
               </div>
-              <h3 class="area-card__title">Contratos Empresariais</h3>
+              <h3 class="area-card__title">
+                Cobranças e Recuperação de Crédito
+              </h3>
               <p class="area-card__desc">
-                Elaboração, negociação e gestão de contratos com foco em
-                prevenção e resultado.
+                Cobranças judiciais e extrajudiciais.<br />
+                Renegociação de dívidas.<br />
+                Recuperação de crédito.<br />
+                Defesa em execuções e cobranças.
               </p>
               <span class="area-card__link">Saiba mais →</span>
             </article>
@@ -457,10 +477,10 @@
                   />
                 </svg>
               </div>
-              <h3 class="area-card__title">Direito Societário</h3>
+              <h3 class="area-card__title">Contencioso Estratégico</h3>
               <p class="area-card__desc">
-                Estruturas societárias sólidas para proteger e expandir negócios
-                com segurança.
+                Atuação em ações cíveis e empresariais em geral.<br />
+                Demandas relacionadas ao Direito do Consumidor.
               </p>
               <span class="area-card__link">Saiba mais →</span>
             </article>
@@ -477,15 +497,16 @@
                   <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
                 </svg>
               </div>
-              <h3 class="area-card__title">Planejamento Patrimonial</h3>
+              <h3 class="area-card__title">Direito do Trabalho</h3>
               <p class="area-card__desc">
-                Soluções estratégicas para preservar e organizar o patrimônio
-                com eficiência e discrição.
+                Consultoria trabalhista preventiva para empresas.<br />
+                Gestão de riscos trabalhistas.<br />
+                Atuação em processos trabalhistas judiciais.
               </p>
               <span class="area-card__link">Saiba mais →</span>
             </article>
 
-            <article class="area-card">
+            <!-- <article class="area-card">
               <div class="area-card__num">05</div>
               <div class="area-card__icon" aria-hidden="true">
                 <svg
@@ -498,8 +519,8 @@
                     d="M3 6l9-4 9 4v6c0 5.25-3.75 10.15-9 11.25C6.75 22.15 3 17.25 3 12V6z"
                   />
                 </svg>
-              </div>
-              <h3 class="area-card__title">Contencioso Estratégico</h3>
+              </div> -->
+            <!-- <h3 class="area-card__title">Contencioso Estratégico</h3>
               <p class="area-card__desc">
                 Atuação em ações cíveis e empresariais com visão estratégica e
                 foco em resultados.
@@ -528,7 +549,7 @@
                 recuperação de crédito.
               </p>
               <span class="area-card__link">Saiba mais →</span>
-            </article>
+            </article> -->
           </div>
         </div>
       </section>

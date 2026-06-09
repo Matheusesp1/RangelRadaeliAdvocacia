@@ -215,6 +215,15 @@ p:last-child { margin-bottom: 0; }
   display: flex;
   flex-direction: column;
   line-height: 1.1;
+   flex-direction: column;
+  align-items: center;
+}
+
+.logo__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
 }
 
 .logo__name {
@@ -223,17 +232,43 @@ p:last-child { margin-bottom: 0; }
   font-weight: 700;
   color: var(--color-petroleo);
   letter-spacing: 0.05em;
+  line-height: 1;
 }
 
 .logo__sub {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-family: var(--font-body);
   font-size: 0.55rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.25em;
   color: var(--color-gold);
-
 }
 
+.logo__line {
+  display: block;
+  height: 1px;
+  width: 18px;
+  background-color: var(--color-gold);
+}
+
+.logo__top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo__icon {
+  height: 48px;
+  width: auto;
+}
+
+.logo__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 /* Nav desktop */
 .nav__list {
   display: flex;
