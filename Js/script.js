@@ -188,80 +188,80 @@ function initFadeInObserver() {
 /* ================================================================
    5. FORMULÁRIO DE CONTATO — Validação e feedback
 ================================================================ */
-function initContactForm() {
-  var form = document.getElementById("contactForm");
-  var submitBtn = document.getElementById("submitBtn");
-  var feedback = document.getElementById("formFeedback");
+// function initContactForm() {
+//   var form = document.getElementById("contactForm");
+//   var submitBtn = document.getElementById("submitBtn");
+//   var feedback = document.getElementById("formFeedback");
 
-  if (!form) return;
+//   if (!form) return;
 
-  const SERVICE_ID = "service_0dtbo2q";
-  const TEMPLATE_ID = "template_nm1y795";
-  const PUBLIC_KEY = "cX7j1uCZWBffdHsKI-W6C";
+//   const SERVICE_ID = "service_0dtbo2q";
+//   const TEMPLATE_ID = "template_nm1y795";
+//   const PUBLIC_KEY = "cX7j1uCZWBffdHsKI-W6C";
 
-  emailjs.init({
-    publicKey: PUBLIC_KEY,
-  });
-  // Validação em tempo real ao sair de cada campo
-  var fields = form.querySelectorAll(".form__input");
+//   emailjs.init({
+//     publicKey: PUBLIC_KEY,
+//   });
+//   // Validação em tempo real ao sair de cada campo
+//   var fields = form.querySelectorAll(".form__input");
 
-  fields.forEach(function (field) {
-    field.addEventListener("blur", function () {
-      validateField(field);
-    });
+//   fields.forEach(function (field) {
+//     field.addEventListener("blur", function () {
+//       validateField(field);
+//     });
 
-    field.addEventListener("input", function () {
-      field.classList.remove("is-error");
-      var errorEl = document.getElementById(field.id + "-error");
+//     field.addEventListener("input", function () {
+//       field.classList.remove("is-error");
+//       var errorEl = document.getElementById(field.id + "-error");
 
-      if (errorEl) {
-        errorEl.textContent = "";
-      }
-    });
-  });
+//       if (errorEl) {
+//         errorEl.textContent = "";
+//       }
+//     });
+//   });
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+//   form.addEventListener("submit", function (e) {
+//     e.preventDefault();
 
-    var isValid = true;
+//     var isValid = true;
 
-    fields.forEach(function (field) {
-      if (!validateField(field)) {
-        isValid = false;
-      }
-    });
+//     fields.forEach(function (field) {
+//       if (!validateField(field)) {
+//         isValid = false;
+//       }
+//     });
 
-    if (!isValid) return;
+//     if (!isValid) return;
 
-    submitBtn.disabled = true;
-    submitBtn.textContent = "Enviando...";
+//     submitBtn.disabled = true;
+//     submitBtn.textContent = "Enviando...";
 
-    const templateParams = {
-      nome: document.getElementById("nome").value,
-      email: document.getElementById("email").value,
-      telefone: document.getElementById("telefone").value,
-      assunto: document.getElementById("assunto").value,
-      mensagem: document.getElementById("mensagem").value,
-    };
+//     const templateParams = {
+//       nome: document.getElementById("nome").value,
+//       email: document.getElementById("email").value,
+//       telefone: document.getElementById("telefone").value,
+//       assunto: document.getElementById("assunto").value,
+//       mensagem: document.getElementById("mensagem").value,
+//     };
 
-    emailjs
-      .send(SERVICE_ID, TEMPLATE_ID, templateParams)
-      .then(function () {
-        showFeedback(feedback, "✓ Mensagem enviada com sucesso!", "success");
+//     emailjs
+//       .send(SERVICE_ID, TEMPLATE_ID, templateParams)
+//       .then(function () {
+//         showFeedback(feedback, "✓ Mensagem enviada com sucesso!", "success");
 
-        form.reset();
-      })
-      .catch(function (error) {
-        console.error(error);
+//         form.reset();
+//       })
+//       .catch(function (error) {
+//         console.error(error);
 
-        showFeedback(feedback, "Erro ao enviar mensagem.", "error");
-      })
-      .finally(function () {
-        submitBtn.disabled = false;
-        submitBtn.textContent = "Enviar Mensagem";
-      });
-  });
-}
+//         showFeedback(feedback, "Erro ao enviar mensagem.", "error");
+//       })
+//       .finally(function () {
+//         submitBtn.disabled = false;
+//         submitBtn.textContent = "Enviar Mensagem";
+//       });
+//   });
+// }
 
 /**
  * Valida um campo individualmente.
