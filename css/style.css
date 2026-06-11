@@ -215,6 +215,15 @@ p:last-child { margin-bottom: 0; }
   display: flex;
   flex-direction: column;
   line-height: 1.1;
+   flex-direction: column;
+  align-items: center;
+}
+
+.logo__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
 }
 
 .logo__name {
@@ -223,16 +232,43 @@ p:last-child { margin-bottom: 0; }
   font-weight: 700;
   color: var(--color-petroleo);
   letter-spacing: 0.05em;
+  line-height: 1;
 }
 
 .logo__sub {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-family: var(--font-body);
   font-size: 0.55rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.25em;
   color: var(--color-gold);
 }
 
+.logo__line {
+  display: block;
+  height: 1px;
+  width: 18px;
+  background-color: var(--color-gold);
+}
+
+.logo__top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo__icon {
+  height: 48px;
+  width: auto;
+}
+
+.logo__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 /* Nav desktop */
 .nav__list {
   display: flex;
@@ -292,6 +328,17 @@ p:last-child { margin-bottom: 0; }
   border-top: 1px solid var(--color-border);
 }
 
+
+/* Fix menu mobile iOS */
+.nav-mobile {
+  position: relative;
+  z-index: 99;
+}
+
+.nav-mobile.is-open {
+  display: block !important;
+}
+
 .nav-mobile.is-open { display: block; }
 
 .nav-mobile__list { padding: var(--space-sm) 0; }
@@ -335,7 +382,7 @@ p:last-child { margin-bottom: 0; }
   pointer-events: none;
 }
 
-/* Linha vertical decorativa */
+/* Linha vertical decorativa
 .hero::after {
   content: '';
   position: absolute;
@@ -344,7 +391,7 @@ p:last-child { margin-bottom: 0; }
   height: 100%;
   background: linear-gradient(to bottom, transparent, rgba(184,145,97,0.15), transparent);
   pointer-events: none;
-}
+} */
 
 .hero__inner {
   display: grid;
@@ -479,6 +526,7 @@ p:last-child { margin-bottom: 0; }
   margin-left: auto;
   flex-shrink: 0;
   transition: stroke var(--transition);
+  display: none; /* Esconde a seta por padrão */
 }
 
 .hero__panel-item:hover .arrow { stroke: var(--color-gold); }
@@ -1097,3 +1145,9 @@ p:last-child { margin-bottom: 0; }
   :root { --space-2xl: 2.5rem; }
   .contato__form-wrapper { padding: var(--space-sm); }
 }
+
+@media (max-width: 768px) {
+  .nav-mobile.is-open {
+    display: block !important;
+  }
+} 
