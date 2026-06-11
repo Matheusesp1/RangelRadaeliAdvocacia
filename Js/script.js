@@ -184,21 +184,115 @@ function initFadeInObserver() {
     observer.observe(el);
   });
 }
-/* ================================================================
-   5. 
-================================================================ */
 
-function initContactForm() { var form = document.getElementById("contactForm"); var submitBtn = document.getElementById("submitBtn"); var feedback = document.getElementById("formFeedback"); if (!form) return; 
+/* ================================================================
+   5. FORMULÁRIO DE CONTATO — Validação e feedback
+================================================================ */
+function initContactForm() {
+  var form = document.getElementById("contactForm");
+  var submitBtn = document.getElementById("submitBtn");
+  var feedback = document.getElementById("formFeedback");
+
+  if (!form) return;
+
   // Validação em tempo real ao sair de cada campo
-   var fields = form.querySelectorAll(".form__input"); fields.forEach(function (field) { field.addEventListener("blur", function () { validateField(field); }); 
-   // Remove estado de erro enquanto digita 
-   field.addEventListener("input", function () { field.classList.remove("is-error"); var errorEl = document.getElementById(field.id + "-error"); if (errorEl) errorEl.textContent = ""; }); }); 
-   // Envio do formulário 
-   form.addEventListener("submit", function (e) { e.preventDefault(); 
-    // Valida todos os campos obrigatórios 
-    var isValid = true; fields.forEach(function (field) { if (!validateField(field)) { isValid = false; } }); if (!isValid) return; 
-    // Simula envio (substitua aqui pelo seu endpoint real) 
-    submitBtn.disabled = true; submitBtn.textContent = "Enviando…"; setTimeout(function () { showFeedback( feedback, "✓ Mensagem enviada! Entraremos em contato em breve.", "success", ); form.reset(); submitBtn.disabled = false; submitBtn.textContent = "Enviar Mensagem"; }, 1500); }); }
+  var fields = form.querySelectorAll(".form__input");
+  fields.forEach(function (field) {
+    field.addEventListener("blur", function () {
+      validateField(field);
+    });
+
+    // Remove estado de erro enquanto digita
+    field.addEventListener("input", function () {
+      field.classList.remove("is-error");
+      var errorEl = document.getElementById(field.id + "-error");
+      if (errorEl) errorEl.textContent = "";
+    });
+  });
+
+  // Envio do formulário
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Valida todos os campos obrigatórios
+    var isValid = true;
+    fields.forEach(function (field) {
+      if (!validateField(field)) {
+        isValid = false;
+      }
+    });
+
+    if (!isValid) return;
+
+    // Simula envio (substitua aqui pelo seu endpoint real)
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Enviando…";
+
+    setTimeout(function () {
+      showFeedback(
+        feedback,
+        "✓ Mensagem enviada! Entraremos em contato em breve.",
+        "success",
+      );
+      form.reset();
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Enviar Mensagem";
+    }, 1500);
+  });
+}
+
+/**
+ * Valida um campo individualmente.
+ * @param   {HTMLElement} field
+ * @returns {boolean}     true se válido
+ */
+function validateField(field) {
+  var value = field.value.trim();
+  var required = field.hasAttribute("required");
+  var errorEl = document.getElementById(field.id + "-error");
+  var message = "";
+
+  if (required && value === "") {
+    message = "Este campo é obrigatório.";
+  } else if (field.type === "email" && value !== "") {
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(value)) {
+      message = "Informe um e-mail válido.";
+    }
+  } else if (field.tagName === "SELECT" && required && value === "") {
+    message = "Selecione uma opção.";
+  }
+
+  if (message) {
+    field.classList.add("is-error");
+    if (errorEl) errorEl.textContent = message;
+    return false;
+  }
+
+  field.classList.remove("is-error");
+  if (errorEl) errorEl.textContent = "";
+  return true;
+}
+
+/**
+ * Exibe mensagem de feedback no formulário.
+ * @param {HTMLElement} el       - elemento de feedback
+ * @param {string}      message  - texto a exibir
+ * @param {string}      type     - 'success' | 'error'
+ */
+function showFeedback(el, message, type) {
+  if (!el) return;
+
+  el.textContent = message;
+  el.className = "form__feedback is-" + type;
+
+  // Remove feedback após 6 segundos
+  setTimeout(function () {
+    el.textContent = "";
+    el.className = "form__feedback";
+  }, 6000);
+}
+
 /* ================================================================
    6. BOTÃO VOLTAR AO TOPO
 ================================================================ */
