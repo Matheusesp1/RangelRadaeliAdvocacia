@@ -1,1162 +1,585 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Rangel Radaeli Advocacia – Estratégia Jurídica. Segurança para Decisões Relevantes."
-    />
-    <title>Rangel Radaeli Advocacia</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rangel Radaeli Advocacia – Estratégia Jurídica. Segurança para Decisões Relevantes." />
+  <title>Rangel Radaeli Advocacia</title>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/LogoRR2.png" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
 
-    <!--
+  <!--
     Tipografia oficial conforme Manual de Marca:
     - Cinzel       → equivalente gratuita da Trajan Pro (títulos, logotipo)
     - Montserrat   → fonte secundária oficial (textos, corpo, UI)
   -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <!-- ============================================================
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
        HEADER
   ============================================================ -->
-    <header class="header" id="header">
-      <div class="container header__inner">
-        <!-- Logo-->
-        <a
-          href="#hero"
-          class="logo"
-          aria-label="Rangel Radaeli Advocacia – Início"
-        >
-          <div class="logo__wrapper">
-            <div class="logo__top">
-              <img src="assets/images/LogoRR.png" alt="" class="logo__icon" />
-              <div class="logo__text">
-                <span class="logo__name">Rangel Radaeli</span>
-                <span class="logo__sub">
-                  <span class="logo__line"></span>
-                  ADVOCACIA
-                  <span class="logo__line"></span>
-                </span>
-              </div>
-            </div>
-          </div>
-        </a>
+  <header class="header" id="header">
+    <div class="container header__inner">
 
-        <!-- Navegação desktop -->
-        <nav class="nav" aria-label="Menu principal">
-          <ul class="nav__list">
-            <li><a href="#sobre" class="nav__link">Sobre</a></li>
-            <li><a href="#areas" class="nav__link">Áreas de Atuação</a></li>
-            <li><a href="#diferenciais" class="nav__link">Diferenciais</a></li>
-            <li><a href="#multidisciplinar" class="nav__link">Parceiros</a></li>
-            <li>
-              <a href="#contato" class="nav__link nav__link--cta">Contato</a>
-            </li>
-          </ul>
-        </nav>
+      <!-- Logo: substituir src pela imagem real do logo quando disponível -->
+      <a href="#hero" class="logo" aria-label="Rangel Radaeli Advocacia – Início">
+        <img
+          src="assets/images/logo.png"
+          alt="Rangel Radaeli Advocacia"
+          class="logo__img"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <!-- Fallback textual caso a imagem não esteja disponível -->
+        <span class="logo__fallback" style="display:none;">
+          <span class="logo__name">Rangel Radaeli</span>
+          <span class="logo__sub">— ADVOCACIA —</span>
+        </span>
+      </a>
 
-        <!-- Hamburguer (mobile) -->
-        <button
-          class="hamburger"
-          id="hamburgerBtn"
-          aria-label="Abrir menu"
-          aria-expanded="false"
-        >
-          <span class="hamburger__line"></span>
-          <span class="hamburger__line"></span>
-          <span class="hamburger__line"></span>
-        </button>
-      </div>
-
-      <!-- Menu mobile -->
-      <nav
-        class="nav-mobile"
-        id="mobileMenu"
-        aria-label="Menu mobile"
-        aria-hidden="true"
-      >
-        <ul class="nav-mobile__list">
-          <li><a href="#sobre" class="nav-mobile__link">Sobre</a></li>
-          <li>
-            <a href="#areas" class="nav-mobile__link">Áreas de Atuação</a>
-          </li>
-          <li>
-            <a href="#diferenciais" class="nav-mobile__link">Diferenciais</a>
-          </li>
-          <li>
-            <a href="#multidisciplinar" class="nav-mobile__link">Parceiros</a>
-          </li>
-          <li><a href="#contato" class="nav-mobile__link">Contato</a></li>
+      <!-- Navegação desktop -->
+      <nav class="nav" aria-label="Menu principal">
+        <ul class="nav__list">
+          <li><a href="#sobre" class="nav__link">Sobre</a></li>
+          <li><a href="#areas" class="nav__link">Áreas de Atuação</a></li>
+          <li><a href="#diferenciais" class="nav__link">Diferenciais</a></li>
+          <li><a href="#multidisciplinar" class="nav__link">Parceiros</a></li>
+          <li><a href="#contato" class="nav__link nav__link--cta">Contato</a></li>
         </ul>
       </nav>
-    </header>
 
-    <main>
-      <!-- ============================================================
+      <!-- Hamburguer (mobile) -->
+      <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu" aria-expanded="false">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+
+    <!-- Menu mobile -->
+    <nav class="nav-mobile" id="mobileMenu" aria-label="Menu mobile" aria-hidden="true">
+      <ul class="nav-mobile__list">
+        <li><a href="#sobre"          class="nav-mobile__link">Sobre</a></li>
+        <li><a href="#areas"          class="nav-mobile__link">Áreas de Atuação</a></li>
+        <li><a href="#diferenciais"   class="nav-mobile__link">Diferenciais</a></li>
+        <li><a href="#multidisciplinar" class="nav-mobile__link">Parceiros</a></li>
+        <li><a href="#contato"        class="nav-mobile__link">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
          HERO — "Estratégia Jurídica. Segurança para Decisões Relevantes."
          Inspirado no mockup da página 16 do projeto
     ============================================================ -->
-      <section class="hero" id="hero">
-        <div class="container hero__inner">
-          <div class="hero__content">
-            <!-- Eyebrow -->
-            <p class="hero__eyebrow">Rangel Radaeli Advocacia</p>
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
 
-            <!-- Título principal conforme mockup do projeto -->
-            <h1 class="hero__title">
-              Estratégia Jurídica.<br />
-              Segurança para Decisões<br />
-              <em class="hero__title-accent">Relevantes.</em>
-            </h1>
+        <div class="hero__content">
+          <!-- Eyebrow -->
+          <p class="hero__eyebrow">Rangel Radaeli Advocacia</p>
 
-            <p class="hero__desc">
-              Atuação jurídica personalizada para empresas, patrimônios e
-              investidores que valorizam resultados consistentes.
-            </p>
+          <!-- Título principal conforme mockup do projeto -->
+          <h1 class="hero__title">
+            Estratégia Jurídica.<br />
+            Segurança para Decisões<br />
+            <em class="hero__title-accent">Relevantes.</em>
+          </h1>
 
-            <div class="hero__actions">
-              <a href="#sobre" class="btn btn--primary">Conheça o Escritório</a>
-              <a href="#contato" class="btn btn--ghost">Fale Conosco</a>
-            </div>
+          <p class="hero__desc">
+            Atuação jurídica personalizada para empresas, patrimônios e
+            investidores que valorizam resultados consistentes.
+          </p>
 
-            <!-- Contatos rápidos -->
-            <div class="hero__contacts">
-              <a
-                href="https://wa.me/5527988626096?text=Olá,%20gostaria%20de%20um%20atendimento"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="hero__contact-link"
-              >
-                <!-- Ícone WhatsApp -->
-                <svg
-                  class="hero__contact-icon"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
-                  />
-                  <path
-                    d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.528 5.845L.057 23.571a.75.75 0 0 0 .921.908l5.85-1.53A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 0 1-4.953-1.354l-.355-.214-3.674.963.981-3.589-.232-.368A9.722 9.722 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"
-                  />
-                </svg>
-                (27) 98862-6096
-              </a>
-              <a
-                href="https://mail.google.com/mail/?view=cm&to=contato@rangeradaeli.adv.br&su=Contato%20pelo%20Site"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="hero__contact-link"
-              >
-                <svg
-                  class="hero__contact-icon"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  aria-hidden="true"
-                >
-                  <rect x="2" y="4" width="20" height="16" rx="2" />
-                  <path d="m2 7 10 7 10-7" />
-                </svg>
-                rangelradaeli.adv@gmail.com
-              </a>
-            </div>
+          <div class="hero__actions">
+            <a href="#sobre" class="btn btn--primary">Conheça o Escritório</a>
+            <a href="#contato" class="btn btn--ghost">Fale Conosco</a>
           </div>
 
-          <!-- Painel lateral com áreas de atuação (conforme mockup mobile) -->
-          <aside class="hero__panel" aria-label="Áreas de atuação em destaque">
-            <p class="hero__panel-label">Áreas de Atuação</p>
-            <ul class="hero__panel-list">
-              <li class="hero__panel-item">
-                <svg
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                    <polyline points="14 2 14 8 20 8"/>
-                    <line x1="16" y1="13" x2="8" y2="13"/>
-                    <line x1="16" y1="17" x2="8" y2="17"/>
-                    <line x1="10" y1="9" x2="8" y2="9"/>
-                  </svg>
-                <span>Consultoria e Contratos </span>
-                <svg
-                  class="arrow"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  aria-hidden="true"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </li>
-              <li class="hero__panel-item">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
-                  />
-                  <polyline points="14 2 14 8 20 8" />
-                </svg>
-                <span>Cobranças e Recuperação de Crédito</span>
-                <svg
-                  class="arrow"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  aria-hidden="true"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </li>
-              <li class="hero__panel-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M12 2v20"/>
-                <path d="M3 9h18"/>
-                <path d="M3 9l4 8a4 4 0 0 0 8 0l4-8"/>
-                <path d="M7 9l-4 8"/>
-                <path d="M17 9l4 8"/>
-            </svg>
-                </svg>
-                <span>Contencioso Estratégico</span>
-                <svg
-                  class="arrow"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  aria-hidden="true"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </li>
-              <li class="hero__panel-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                <circle cx="9" cy="7" r="4"/>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          <!-- Contatos rápidos -->
+          <div class="hero__contacts">
+            <a href="https://wa.me/5527988626096?text=Olá,%20gostaria%20de%20um%20atendimento"
+               target="_blank" rel="noopener noreferrer" class="hero__contact-link">
+              <!-- Ícone WhatsApp -->
+              <svg class="hero__contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.528 5.845L.057 23.571a.75.75 0 0 0 .921.908l5.85-1.53A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 0 1-4.953-1.354l-.355-.214-3.674.963.981-3.589-.232-.368A9.722 9.722 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
               </svg>
-                <span>Direito do Trabalho </span>
-                <svg
-                  class="arrow"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  aria-hidden="true"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </li>
-              <li class="hero__panel-item">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  aria-hidden="true"
-                >
-                  <circle cx="11" cy="11" r="8" />
-                  <path d="m21 21-4.35-4.35" />
-                </svg>
-                <span>Atuação Multidisciplinar </span>
-                <svg
-                  class="arrow"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  aria-hidden="true"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </li>
-            </ul>
-          </aside>
-        </div>
-
-        <!-- Barra dourada decorativa -->
-        <div class="hero__bar" aria-hidden="true"></div>
-      </section>
-
-      <!-- ============================================================
-         SOBRE — Propósito e valores do escritório
-    ============================================================ -->
-      <section class="sobre" id="sobre">
-        <div class="container sobre__inner">
-          <div class="sobre__text">
-            <span class="section-tag">Quem Somos</span>
-            <h2 class="section-title">
-              Mais do que um escritório<br />jurídico tradicional
-            </h2>
-            <p>
-              A Rangel Radaeli Advocacia nasce com o propósito de ser mais do
-              que um escritório jurídico tradicional. Nossa atuação está
-              fundamentada na combinação entre profundidade técnica, pensamento
-              estratégico e proximidade com o cliente.
-            </p>
-            <p>
-              Oferecemos uma assessoria jurídica que participa ativamente da
-              construção, organização e expansão de negócios, atendendo pequenas
-              e médias empresas, investidores, incorporadoras, imobiliárias e
-              pessoas físicas que valorizam segurança jurídica e soluções
-              pragmáticas.
-            </p>
-            <p>
-              Nossa marca transmite autoridade sem excessos, sofisticação sem
-              ostentação e confiança sem distanciamento.
-            </p>
-            <a
-              href="#contato"
-              class="btn btn--primary"
-              style="margin-top: 1.5rem; display: inline-flex"
-            >
-              Fale com um Especialista
+              (27) 98862-6096
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&to=contato@rangeradaeli.adv.br&su=Contato%20pelo%20Site"
+               target="_blank" rel="noopener noreferrer" class="hero__contact-link">
+              <svg class="hero__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m2 7 10 7 10-7"/>
+              </svg>
+              contato@rangeradaeli.adv.br
             </a>
           </div>
-
-          <!-- Cards de atributos da marca conforme manual -->
-          <div class="sobre__attrs">
-            <div class="attr-card">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                aria-hidden="true"
-              >
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              </svg>
-              <h3>Estratégia</h3>
-              <p>Soluções construídas com visão ampla e foco no resultado.</p>
-            </div>
-            <div class="attr-card">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                aria-hidden="true"
-              >
-                <rect x="2" y="7" width="20" height="14" rx="2" />
-                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-              </svg>
-              <h3>Solidez</h3>
-              <p>Base técnica robusta para proteger seus interesses.</p>
-            </div>
-            <div class="attr-card">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                aria-hidden="true"
-              >
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                <circle cx="9" cy="7" r="4" />
-              </svg>
-              <h3>Proximidade</h3>
-              <p>Atendimento próximo, personalizado e comprometido.</p>
-            </div>
-            <div class="attr-card">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                aria-hidden="true"
-              >
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-              </svg>
-              <h3>Pragmatismo</h3>
-              <p>Decisões objetivas e soluções eficientes para cada demanda.</p>
-            </div>
-          </div>
         </div>
-      </section>
 
-      <!-- ============================================================
-         ÁREAS DE ATUAÇÃO — conforme projeto e manual
-    ============================================================ -->
-      <section class="areas" id="areas">
-        <div class="container">
-          <div class="areas__header">
-            <span class="section-tag section-tag--light">O que fazemos</span>
-            <h2 class="section-title section-title--light">Áreas de Atuação</h2>
-            <p class="areas__subtitle">
-              Com atuação estratégica em Contratos, Direito do Trabalho,
-              Cobranças e Recuperação de Crédito e Contencioso Estratégico,
-              combinamos precisão técnica e visão de negócio para entregar
-              soluções jurídicas que protegem e impulsionam seus interesses.
-            </p>
-          </div>
-
-          <div class="areas__grid">
-            <article class="area-card">
-              <div class="area-card__num">01</div>
-              <div class="area-card__icon" aria-hidden="true">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                  <polyline points="9 22 9 12 15 12 15 22" />
-                </svg>
-              </div>
-              <h3 class="area-card__title">Consultoria e Contratos</h3>
-              <p class="area-card__desc">
-                Elaboração, análise e revisão de contratos.<br />
-                Estruturação de instrumentos jurídicos. <br />
-                Consultoria preventiva.
-              </p>
-              <span class="area-card__link">Saiba mais →</span>
-            </article>
-
-            <article class="area-card">
-              <div class="area-card__num">02</div>
-              <div class="area-card__icon" aria-hidden="true">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <path
-                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
-                  />
-                  <polyline points="14 2 14 8 20 8" />
-                  <line x1="16" y1="13" x2="8" y2="13" />
-                  <line x1="16" y1="17" x2="8" y2="17" />
-                </svg>
-              </div>
-              <h3 class="area-card__title">
-                Cobranças e Recuperação de Crédito
-              </h3>
-              <p class="area-card__desc">
-                Cobranças judiciais e extrajudiciais.<br />
-                Renegociação de dívidas.<br />
-                Recuperação de crédito.<br />
-                Defesa em execuções e cobranças.
-              </p>
-              <span class="area-card__link">Saiba mais →</span>
-            </article>
-
-            <article class="area-card">
-              <div class="area-card__num">03</div>
-              <div class="area-card__icon" aria-hidden="true">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                  <path
-                    d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"
-                  />
-                </svg>
-              </div>
-              <h3 class="area-card__title">Contencioso Estratégico</h3>
-              <p class="area-card__desc">
-                Atuação em ações cíveis e empresariais em geral.<br />
-                Demandas relacionadas ao Direito do Consumidor.
-              </p>
-              <span class="area-card__link">Saiba mais →</span>
-            </article>
-
-            <article class="area-card">
-              <div class="area-card__num">04</div>
-              <div class="area-card__icon" aria-hidden="true">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-                </svg>
-              </div>
-              <h3 class="area-card__title">Direito do Trabalho</h3>
-              <p class="area-card__desc">
-                Consultoria trabalhista preventiva para empresas.<br />
-                Gestão de riscos trabalhistas.<br />
-                Atuação em processos trabalhistas judiciais.
-              </p>
-              <span class="area-card__link">Saiba mais →</span>
-            </article>
-
-            <!-- <article class="area-card">
-              <div class="area-card__num">05</div>
-              <div class="area-card__icon" aria-hidden="true">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <path
-                    d="M3 6l9-4 9 4v6c0 5.25-3.75 10.15-9 11.25C6.75 22.15 3 17.25 3 12V6z"
-                  />
-                </svg>
-              </div> -->
-            <!-- <h3 class="area-card__title">Contencioso Estratégico</h3>
-              <p class="area-card__desc">
-                Atuação em ações cíveis e empresariais com visão estratégica e
-                foco em resultados.
-              </p>
-              <span class="area-card__link">Saiba mais →</span>
-            </article>
-
-            <article class="area-card">
-              <div class="area-card__num">06</div>
-              <div class="area-card__icon" aria-hidden="true">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <line x1="12" y1="1" x2="12" y2="23" />
-                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                </svg>
-              </div>
-              <h3 class="area-card__title">
-                Cobranças e Recuperação de Crédito
-              </h3>
-              <p class="area-card__desc">
-                Cobranças judiciais e extrajudiciais, renegociação de dívidas e
-                recuperação de crédito.
-              </p>
-              <span class="area-card__link">Saiba mais →</span>
-            </article> -->
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================
-         DIFERENCIAIS — Atributos da marca conforme manual
-    ============================================================ -->
-      <section class="diferenciais" id="diferenciais">
-        <div class="container">
-          <span class="section-tag">Por que nos escolher</span>
-          <h2 class="section-title">Nossos Diferenciais</h2>
-
-          <div class="diff-grid">
-            <div class="diff-item">
-              <div class="diff-item__icon" aria-hidden="true">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                </svg>
-              </div>
-              <div class="diff-item__text">
-                <h3>Atendimento Próximo e Personalizado</h3>
-                <p>
-                  Cada cliente recebe atenção dedicada, com soluções construídas
-                  para sua realidade específica.
-                </p>
-              </div>
-            </div>
-
-            <div class="diff-item">
-              <div class="diff-item__icon" aria-hidden="true">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                </svg>
-              </div>
-              <div class="diff-item__text">
-                <h3>Atuação Estratégica e Preventiva</h3>
-                <p>
-                  Antecipamos riscos e agimos com inteligência para proteger
-                  seus interesses antes que problemas surjam.
-                </p>
-              </div>
-            </div>
-
-            <div class="diff-item">
-              <div class="diff-item__icon" aria-hidden="true">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <polyline points="12 6 12 12 16 14" />
-                </svg>
-              </div>
-              <div class="diff-item__text">
-                <h3>Agilidade na Condução das Demandas</h3>
-                <p>
-                  Respostas rápidas e condução eficiente de cada etapa, sem
-                  burocracia desnecessária.
-                </p>
-              </div>
-            </div>
-
-            <div class="diff-item">
-              <div class="diff-item__icon" aria-hidden="true">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <rect x="2" y="7" width="20" height="14" rx="2" />
-                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-                </svg>
-              </div>
-              <div class="diff-item__text">
-                <h3>Equipe Multidisciplinar</h3>
-                <p>
-                  Parceiros estratégicos especializados em diversas áreas para
-                  cobrir todas as suas necessidades.
-                </p>
-              </div>
-            </div>
-
-            <div class="diff-item">
-              <div class="diff-item__icon" aria-hidden="true">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                  <polyline points="22 4 12 14.01 9 11.01" />
-                </svg>
-              </div>
-              <div class="diff-item__text">
-                <h3>Compromisso com Resultados</h3>
-                <p>
-                  Cada atuação é orientada para entregar resultados reais com
-                  máxima segurança jurídica.
-                </p>
-              </div>
-            </div>
-
-            <div class="diff-item">
-              <div class="diff-item__icon" aria-hidden="true">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <circle cx="12" cy="12" r="3" />
-                  <path
-                    d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"
-                  />
-                </svg>
-              </div>
-              <div class="diff-item__text">
-                <h3>Sofisticação Discreta</h3>
-                <p>
-                  Uma advocacia moderna, alinhada ao conceito "quiet luxury",
-                  que entrega excelência sem ostentação.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================
-         MULTIDISCIPLINAR — Parceiros estratégicos
-    ============================================================ -->
-      <section class="multidisciplinar" id="multidisciplinar">
-        <div class="container multidisciplinar__inner">
-          <div class="multi__text">
-            <span class="section-tag section-tag--light"
-              >Rede de especialistas</span
-            >
-            <h2 class="section-title section-title--light">
-              Atuação Multidisciplinar
-            </h2>
-            <p>
-              Além da equipe principal, contamos com parceiros estratégicos
-              especializados em diversas áreas. Essa estrutura permite atuação
-              técnica integrada em demandas complexas de maior relevância
-              estratégica.
-            </p>
-          </div>
-
-          <ul class="multi-grid">
-            <li class="multi-item">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                aria-hidden="true"
-              >
-                <path d="M2 22V6l9-4 9 4v16" />
-                <path d="M12 2v20" />
-                <path d="M2 11h20" /></svg
-              ><span>Direito Ambiental</span>
+        <!-- Painel lateral com áreas de atuação (conforme mockup mobile) -->
+        <aside class="hero__panel" aria-label="Áreas de atuação em destaque">
+          <p class="hero__panel-label">Áreas de Atuação</p>
+          <ul class="hero__panel-list">
+            <li class="hero__panel-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              <span>Direito Imobiliário</span>
+              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </li>
-            <li class="multi-item">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                aria-hidden="true"
-              >
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></svg
-              ><span>Direito Imobiliário</span>
+            <li class="hero__panel-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <span>Contratos Empresariais</span>
+              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </li>
-            <li class="multi-item">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                aria-hidden="true"
-              >
-                <line x1="12" y1="1" x2="12" y2="23" />
-                <path
-                  d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
-                /></svg
-              ><span>Direito Tributário</span>
+            <li class="hero__panel-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <span>Direito Societário</span>
+              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </li>
-            <li class="multi-item">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                aria-hidden="true"
-              >
-                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></svg
-              ><span>Contabilidade</span>
-            </li>
-            <li class="multi-item">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                aria-hidden="true"
-              >
-                <path
-                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
-                /></svg
-              ><span>Contratos Administrativos e Licitações</span>
-            </li>
-            <li class="multi-item">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                aria-hidden="true"
-              >
-                <rect x="1" y="4" width="22" height="16" rx="2" />
-                <line x1="1" y1="10" x2="23" y2="10" /></svg
-              ><span>Passivo Bancário Estratégico</span>
-            </li>
-            <li class="multi-item">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                aria-hidden="true"
-              >
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                <circle cx="9" cy="7" r="4" />
-                <path
-                  d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"
-                /></svg
-              ><span>Cooperativas</span>
+            <li class="hero__panel-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              <span>Planejamento Patrimonial</span>
+              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </li>
           </ul>
-        </div>
-      </section>
+        </aside>
 
-      <!-- ============================================================
-         CONTATO
-    ============================================================ -->
-      <section class="contato" id="contato">
-        <div class="container contato__inner">
-          <div class="contato__info">
-            <span class="section-tag">Fale Conosco</span>
-            <h2 class="section-title">Entre em Contato</h2>
-            <p>
-              Estamos prontos para ouvir sua demanda e apresentar a melhor
-              solução jurídica para o seu caso. Atendemos empresas e pessoas
-              físicas com agilidade e comprometimento.
-            </p>
+      </div>
 
-            <div class="contato__details">
-              <!-- WhatsApp -->
-              <a
-                href="https://wa.me/5527988626096?text=Olá,%20gostaria%20de%20um%20atendimento"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="contato__item"
-              >
-                <div class="contato__item-icon">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
-                    />
-                    <path
-                      d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.528 5.845L.057 23.571a.75.75 0 0 0 .921.908l5.85-1.53A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 0 1-4.953-1.354l-.355-.214-3.674.963.981-3.589-.232-.368A9.722 9.722 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <span class="contato__item-label">WhatsApp</span>
-                  <span class="contato__item-value">(27) 98862-6096</span>
-                </div>
-              </a>
-
-              <!-- E-mail -->
-              <a
-                href="https://mail.google.com/mail/?view=cm&to=contato@rangeradaeli.adv.br&su=Contato%20pelo%20Site"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="contato__item"
-              >
-                <div class="contato__item-icon">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    aria-hidden="true"
-                  >
-                    <rect x="2" y="4" width="20" height="16" rx="2" />
-                    <path d="m2 7 10 7 10-7" />
-                  </svg>
-                </div>
-                <div>
-                  <span class="contato__item-label">E-mail</span>
-                  <span class="contato__item-value"
-                    >rangelradaeli.adv@gmail.com</span
-                  >
-                </div>
-              </a>
-
-              <!-- Site -->
-              <a
-                href="https://www.rangelradaeliadvocacia.com.br"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="contato__item"
-              >
-                <div class="contato__item-icon">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    aria-hidden="true"
-                  >
-                    <circle cx="12" cy="12" r="10" />
-                    <line x1="2" y1="12" x2="22" y2="12" />
-                    <path
-                      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <span class="contato__item-label">Website</span>
-                  <span class="contato__item-value"
-                    >www.rangelradaeliadvocacia.com.br</span
-                  >
-                </div>
-              </a>
-
-              <!-- Endereço -->
-              <div class="contato__item contato__item--addr">
-                <div class="contato__item-icon">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    aria-hidden="true"
-                  >
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
-                </div>
-                <div>
-                  <span class="contato__item-label">Endereço</span>
-                  <span class="contato__item-value"
-                    >Av. Nossa Sra. da Penha, 2053<br />Sala 1102, Praia do
-                    Canto<br />Vila Velha/ES – CEP 29101-130</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Formulário -->
-          <div class="contato__form-wrapper">
-            <form
-              class="form"
-              id="contactForm"
-              novalidate
-              aria-label="Formulário de contato"
-            >
-              <div class="form__group">
-                <label class="form__label" for="nome"
-                  >Nome completo <span aria-hidden="true">*</span></label
-                >
-                <input
-                  class="form__input"
-                  type="text"
-                  id="nome"
-                  name="nome"
-                  placeholder="Seu nome completo"
-                  required
-                  autocomplete="name"
-                />
-                <span class="form__error" id="nome-error" role="alert"></span>
-              </div>
-
-              <div class="form__group">
-                <label class="form__label" for="email"
-                  >E-mail <span aria-hidden="true">*</span></label
-                >
-                <input
-                  class="form__input"
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="seuemail@exemplo.com"
-                  required
-                  autocomplete="email"
-                />
-                <span class="form__error" id="email-error" role="alert"></span>
-              </div>
-
-              <div class="form__group">
-                <label class="form__label" for="telefone"
-                  >Telefone / WhatsApp</label
-                >
-                <input
-                  class="form__input"
-                  type="tel"
-                  id="telefone"
-                  name="telefone"
-                  placeholder="(27) 00000-0000"
-                  autocomplete="tel"
-                />
-              </div>
-
-              <div class="form__group">
-                <label class="form__label" for="assunto"
-                  >Área de interesse <span aria-hidden="true">*</span></label
-                >
-                <select
-                  class="form__input form__select"
-                  id="assunto"
-                  name="assunto"
-                  required
-                >
-                  <option value="" disabled selected>Selecione uma área</option>
-                  <option value="imobiliario">Direito Imobiliário</option>
-                  <option value="contratos">Contratos Empresariais</option>
-                  <option value="societario">Direito Societário</option>
-                  <option value="patrimonial">Planejamento Patrimonial</option>
-                  <option value="contencioso">Contencioso Estratégico</option>
-                  <option value="trabalhista">Direito do Trabalho</option>
-                  <option value="outro">Outro assunto</option>
-                </select>
-                <span
-                  class="form__error"
-                  id="assunto-error"
-                  role="alert"
-                ></span>
-              </div>
-
-              <div class="form__group">
-                <label class="form__label" for="mensagem"
-                  >Mensagem <span aria-hidden="true">*</span></label
-                >
-                <textarea
-                  class="form__input form__textarea"
-                  id="mensagem"
-                  name="mensagem"
-                  rows="4"
-                  placeholder="Descreva brevemente sua demanda..."
-                  required
-                ></textarea>
-                <span
-                  class="form__error"
-                  id="mensagem-error"
-                  role="alert"
-                ></span>
-              </div>
-
-              <button
-                type="submit"
-                class="btn btn--primary btn--full"
-                id="submitBtn"
-              >
-                Enviar Mensagem
-              </button>
-
-              <div
-                class="form__feedback"
-                id="formFeedback"
-                aria-live="polite"
-                aria-atomic="true"
-              ></div>
-            </form>
-          </div>
-        </div>
-      </section>
-    </main>
+      <!-- Barra dourada decorativa -->
+      <div class="hero__bar" aria-hidden="true"></div>
+    </section>
 
     <!-- ============================================================
+         SOBRE — Propósito e valores do escritório
+    ============================================================ -->
+    <section class="sobre" id="sobre">
+      <div class="container sobre__inner">
+
+        <div class="sobre__text">
+          <span class="section-tag">Quem Somos</span>
+          <h2 class="section-title">Mais do que um escritório<br />jurídico tradicional</h2>
+          <p>
+            A Rangel Radaeli Advocacia nasce com o propósito de ser mais do que um escritório
+            jurídico tradicional. Nossa atuação está fundamentada na combinação entre
+            profundidade técnica, pensamento estratégico e proximidade com o cliente.
+          </p>
+          <p>
+            Oferecemos uma assessoria jurídica que participa ativamente da construção,
+            organização e expansão de negócios, atendendo pequenas e médias empresas,
+            investidores, incorporadoras, imobiliárias e pessoas físicas que valorizam
+            segurança jurídica e soluções pragmáticas.
+          </p>
+          <p>
+            Nossa marca transmite autoridade sem excessos, sofisticação sem ostentação
+            e confiança sem distanciamento.
+          </p>
+          <a href="#contato" class="btn btn--primary" style="margin-top:1.5rem; display:inline-flex;">
+            Fale com um Especialista
+          </a>
+        </div>
+
+        <!-- Cards de atributos da marca conforme manual -->
+        <div class="sobre__attrs">
+          <div class="attr-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <h3>Estratégia</h3>
+            <p>Soluções construídas com visão ampla e foco no resultado.</p>
+          </div>
+          <div class="attr-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            <h3>Solidez</h3>
+            <p>Base técnica robusta para proteger seus interesses.</p>
+          </div>
+          <div class="attr-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            <h3>Proximidade</h3>
+            <p>Atendimento próximo, personalizado e comprometido.</p>
+          </div>
+          <div class="attr-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            <h3>Pragmatismo</h3>
+            <p>Decisões objetivas e soluções eficientes para cada demanda.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ÁREAS DE ATUAÇÃO — conforme projeto e manual
+    ============================================================ -->
+    <section class="areas" id="areas">
+      <div class="container">
+        <div class="areas__header">
+          <span class="section-tag section-tag--light">O que fazemos</span>
+          <h2 class="section-title section-title--light">Áreas de Atuação</h2>
+          <p class="areas__subtitle">
+            Com foco em Contratos, Direito Societário, Direito Imobiliário e
+            Contencioso Estratégico, atuamos com precisão técnica e visão de negócio.
+          </p>
+        </div>
+
+        <div class="areas__grid">
+
+          <article class="area-card">
+            <div class="area-card__num">01</div>
+            <div class="area-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3 class="area-card__title">Direito Imobiliário</h3>
+            <p class="area-card__desc">Segurança jurídica em todas as etapas de empreendimentos e projetos imobiliários.</p>
+            <span class="area-card__link">Saiba mais →</span>
+          </article>
+
+          <article class="area-card">
+            <div class="area-card__num">02</div>
+            <div class="area-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <h3 class="area-card__title">Contratos Empresariais</h3>
+            <p class="area-card__desc">Elaboração, negociação e gestão de contratos com foco em prevenção e resultado.</p>
+            <span class="area-card__link">Saiba mais →</span>
+          </article>
+
+          <article class="area-card">
+            <div class="area-card__num">03</div>
+            <div class="area-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="area-card__title">Direito Societário</h3>
+            <p class="area-card__desc">Estruturas societárias sólidas para proteger e expandir negócios com segurança.</p>
+            <span class="area-card__link">Saiba mais →</span>
+          </article>
+
+          <article class="area-card">
+            <div class="area-card__num">04</div>
+            <div class="area-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3 class="area-card__title">Planejamento Patrimonial</h3>
+            <p class="area-card__desc">Soluções estratégicas para preservar e organizar o patrimônio com eficiência e discrição.</p>
+            <span class="area-card__link">Saiba mais →</span>
+          </article>
+
+          <article class="area-card">
+            <div class="area-card__num">05</div>
+            <div class="area-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6l9-4 9 4v6c0 5.25-3.75 10.15-9 11.25C6.75 22.15 3 17.25 3 12V6z"/></svg>
+            </div>
+            <h3 class="area-card__title">Contencioso Estratégico</h3>
+            <p class="area-card__desc">Atuação em ações cíveis e empresariais com visão estratégica e foco em resultados.</p>
+            <span class="area-card__link">Saiba mais →</span>
+          </article>
+
+          <article class="area-card">
+            <div class="area-card__num">06</div>
+            <div class="area-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3 class="area-card__title">Cobranças e Recuperação de Crédito</h3>
+            <p class="area-card__desc">Cobranças judiciais e extrajudiciais, renegociação de dívidas e recuperação de crédito.</p>
+            <span class="area-card__link">Saiba mais →</span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         DIFERENCIAIS — Atributos da marca conforme manual
+    ============================================================ -->
+    <section class="diferenciais" id="diferenciais">
+      <div class="container">
+        <span class="section-tag">Por que nos escolher</span>
+        <h2 class="section-title">Nossos Diferenciais</h2>
+
+        <div class="diff-grid">
+
+          <div class="diff-item">
+            <div class="diff-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            </div>
+            <div class="diff-item__text">
+              <h3>Atendimento Próximo e Personalizado</h3>
+              <p>Cada cliente recebe atenção dedicada, com soluções construídas para sua realidade específica.</p>
+            </div>
+          </div>
+
+          <div class="diff-item">
+            <div class="diff-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="diff-item__text">
+              <h3>Atuação Estratégica e Preventiva</h3>
+              <p>Antecipamos riscos e agimos com inteligência para proteger seus interesses antes que problemas surjam.</p>
+            </div>
+          </div>
+
+          <div class="diff-item">
+            <div class="diff-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="diff-item__text">
+              <h3>Agilidade na Condução das Demandas</h3>
+              <p>Respostas rápidas e condução eficiente de cada etapa, sem burocracia desnecessária.</p>
+            </div>
+          </div>
+
+          <div class="diff-item">
+            <div class="diff-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+            <div class="diff-item__text">
+              <h3>Equipe Multidisciplinar</h3>
+              <p>Parceiros estratégicos especializados em diversas áreas para cobrir todas as suas necessidades.</p>
+            </div>
+          </div>
+
+          <div class="diff-item">
+            <div class="diff-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div class="diff-item__text">
+              <h3>Compromisso com Resultados</h3>
+              <p>Cada atuação é orientada para entregar resultados reais com máxima segurança jurídica.</p>
+            </div>
+          </div>
+
+          <div class="diff-item">
+            <div class="diff-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+            </div>
+            <div class="diff-item__text">
+              <h3>Sofisticação Discreta</h3>
+              <p>Uma advocacia moderna, alinhada ao conceito "quiet luxury", que entrega excelência sem ostentação.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         MULTIDISCIPLINAR — Parceiros estratégicos
+    ============================================================ -->
+    <section class="multidisciplinar" id="multidisciplinar">
+      <div class="container multidisciplinar__inner">
+
+        <div class="multi__text">
+          <span class="section-tag section-tag--light">Rede de especialistas</span>
+          <h2 class="section-title section-title--light">Atuação Multidisciplinar</h2>
+          <p>
+            Além da equipe principal, contamos com parceiros estratégicos
+            especializados em diversas áreas. Essa estrutura permite atuação
+            técnica integrada em demandas complexas de maior relevância estratégica.
+          </p>
+        </div>
+
+        <ul class="multi-grid">
+          <li class="multi-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 22V6l9-4 9 4v16"/><path d="M12 2v20"/><path d="M2 11h20"/></svg><span>Direito Ambiental</span></li>
+          <li class="multi-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>Direito Imobiliário</span></li>
+          <li class="multi-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><span>Direito Tributário</span></li>
+          <li class="multi-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span>Contabilidade</span></li>
+          <li class="multi-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg><span>Contratos Administrativos e Licitações</span></li>
+          <li class="multi-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg><span>Passivo Bancário Estratégico</span></li>
+          <li class="multi-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Cooperativas</span></li>
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTATO
+    ============================================================ -->
+    <section class="contato" id="contato">
+      <div class="container contato__inner">
+
+        <div class="contato__info">
+          <span class="section-tag">Fale Conosco</span>
+          <h2 class="section-title">Entre em Contato</h2>
+          <p>
+            Estamos prontos para ouvir sua demanda e apresentar a melhor
+            solução jurídica para o seu caso. Atendemos empresas e pessoas
+            físicas com agilidade e comprometimento.
+          </p>
+
+          <div class="contato__details">
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/5527988626096?text=Olá,%20gostaria%20de%20um%20atendimento"
+               target="_blank" rel="noopener noreferrer" class="contato__item">
+              <div class="contato__item-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.528 5.845L.057 23.571a.75.75 0 0 0 .921.908l5.85-1.53A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 0 1-4.953-1.354l-.355-.214-3.674.963.981-3.589-.232-.368A9.722 9.722 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+              </div>
+              <div>
+                <span class="contato__item-label">WhatsApp</span>
+                <span class="contato__item-value">(27) 98862-6096</span>
+              </div>
+            </a>
+
+            <!-- E-mail -->
+            <a href="https://mail.google.com/mail/?view=cm&to=contato@rangeradaeli.adv.br&su=Contato%20pelo%20Site"
+               target="_blank" rel="noopener noreferrer" class="contato__item">
+              <div class="contato__item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+              </div>
+              <div>
+                <span class="contato__item-label">E-mail</span>
+                <span class="contato__item-value">contato@rangeradaeli.adv.br</span>
+              </div>
+            </a>
+
+            <!-- Site -->
+            <a href="https://www.rangeradaeli.adv.br" target="_blank" rel="noopener noreferrer" class="contato__item">
+              <div class="contato__item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <div>
+                <span class="contato__item-label">Website</span>
+                <span class="contato__item-value">www.rangeradaeli.adv.br</span>
+              </div>
+            </a>
+
+            <!-- Endereço -->
+            <div class="contato__item contato__item--addr">
+              <div class="contato__item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <span class="contato__item-label">Endereço</span>
+                <span class="contato__item-value">Av. Nossa Sra. da Penha, 2053<br/>Sala 1102, Praia do Canto<br/>Vila Velha/ES – CEP 29101-130</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Formulário -->
+        <div class="contato__form-wrapper">
+          <form class="form" id="contactForm" novalidate aria-label="Formulário de contato">
+
+            <div class="form__group">
+              <label class="form__label" for="nome">Nome completo <span aria-hidden="true">*</span></label>
+              <input class="form__input" type="text" id="nome" name="nome" placeholder="Seu nome completo" required autocomplete="name" />
+              <span class="form__error" id="nome-error" role="alert"></span>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="email">E-mail <span aria-hidden="true">*</span></label>
+              <input class="form__input" type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required autocomplete="email" />
+              <span class="form__error" id="email-error" role="alert"></span>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="telefone">Telefone / WhatsApp</label>
+              <input class="form__input" type="tel" id="telefone" name="telefone" placeholder="(27) 00000-0000" autocomplete="tel" />
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="assunto">Área de interesse <span aria-hidden="true">*</span></label>
+              <select class="form__input form__select" id="assunto" name="assunto" required>
+                <option value="" disabled selected>Selecione uma área</option>
+                <option value="imobiliario">Direito Imobiliário</option>
+                <option value="contratos">Contratos Empresariais</option>
+                <option value="societario">Direito Societário</option>
+                <option value="patrimonial">Planejamento Patrimonial</option>
+                <option value="contencioso">Contencioso Estratégico</option>
+                <option value="trabalhista">Direito do Trabalho</option>
+                <option value="outro">Outro assunto</option>
+              </select>
+              <span class="form__error" id="assunto-error" role="alert"></span>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="mensagem">Mensagem <span aria-hidden="true">*</span></label>
+              <textarea class="form__input form__textarea" id="mensagem" name="mensagem" rows="4"
+                placeholder="Descreva brevemente sua demanda..." required></textarea>
+              <span class="form__error" id="mensagem-error" role="alert"></span>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+              Enviar Mensagem
+            </button>
+
+            <div class="form__feedback" id="formFeedback" aria-live="polite" aria-atomic="true"></div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
        FOOTER
   ============================================================ -->
-    <footer class="footer">
-      <div class="container footer__inner">
-        <div class="footer__brand">
-          <img
-            src="assets/images/logo-light.png"
-            alt="Rangel Radaeli Advocacia"
-            class="footer__logo"
-            onerror="
-              this.style.display = 'none';
-              this.nextElementSibling.style.display = 'block';
-            "
-          />
-          <span class="footer__logo-fallback" style="display: none">
-            <span class="footer__logo-name">Rangel Radaeli</span>
-            <span class="footer__logo-sub">— ADVOCACIA —</span>
-          </span>
-          <p class="footer__tagline">
-            Solidez para proteger.<br />Estratégia para crescer.<br />Confiança
-            para construir o futuro.
-          </p>
-        </div>
+  <footer class="footer">
+    <div class="container footer__inner">
 
-        <nav class="footer__nav" aria-label="Links do rodapé">
-          <h4 class="footer__nav-title">Áreas de Atuação</h4>
-          <ul class="footer__nav-list">
-            <li>
-              <a href="#areas" class="footer__link">Direito Imobiliário</a>
-            </li>
-            <li>
-              <a href="#areas" class="footer__link">Contratos Empresariais</a>
-            </li>
-            <li>
-              <a href="#areas" class="footer__link">Direito Societário</a>
-            </li>
-            <li>
-              <a href="#areas" class="footer__link">Planejamento Patrimonial</a>
-            </li>
-            <li>
-              <a href="#areas" class="footer__link">Contencioso Estratégico</a>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="footer__contact">
-          <h4 class="footer__nav-title">Contato</h4>
-          <a
-            href="https://wa.me/5527988626096"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="footer__link"
-            >(27) 98862-6096</a
-          >
-          <a
-            href="https://mail.google.com/mail/?view=cm&to=contato@rangeradaeli.adv.br"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="footer__link"
-            >rangelradaeli.adv@gmail.com</a
-          >
-          <a
-            href="https://rangelradaeliadvocacia.com.br"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="footer__link"
-            >www.rangelradaeliadvocacia.com.br</a
-          >
-          <p class="footer__addr">
-            Av. Nossa Sra. da Penha, 2053<br />
-            Sala 1102, Praia do Canto<br />
-            Vila Velha/ES – CEP 29101-130
-          </p>
-        </div>
+      <div class="footer__brand">
+        <img src="assets/images/logo-light.png" alt="Rangel Radaeli Advocacia"
+             class="footer__logo"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+        <span class="footer__logo-fallback" style="display:none;">
+          <span class="footer__logo-name">Rangel Radaeli</span>
+          <span class="footer__logo-sub">— ADVOCACIA —</span>
+        </span>
+        <p class="footer__tagline">
+          Solidez para proteger.<br/>Estratégia para crescer.<br/>Confiança para construir o futuro.
+        </p>
       </div>
 
-      <div class="footer__bottom">
-        <div class="container">
-          <p class="footer__copy">
-            &copy; <span id="currentYear"></span> Rangel Radaeli Advocacia.
-            Todos os direitos reservados.
-          </p>
-        </div>
+      <nav class="footer__nav" aria-label="Links do rodapé">
+        <h4 class="footer__nav-title">Áreas de Atuação</h4>
+        <ul class="footer__nav-list">
+          <li><a href="#areas" class="footer__link">Direito Imobiliário</a></li>
+          <li><a href="#areas" class="footer__link">Contratos Empresariais</a></li>
+          <li><a href="#areas" class="footer__link">Direito Societário</a></li>
+          <li><a href="#areas" class="footer__link">Planejamento Patrimonial</a></li>
+          <li><a href="#areas" class="footer__link">Contencioso Estratégico</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__contact">
+        <h4 class="footer__nav-title">Contato</h4>
+        <a href="https://wa.me/5527988626096" target="_blank" rel="noopener noreferrer" class="footer__link">(27) 98862-6096</a>
+        <a href="https://mail.google.com/mail/?view=cm&to=contato@rangeradaeli.adv.br" target="_blank" rel="noopener noreferrer" class="footer__link">contato@rangeradaeli.adv.br</a>
+        <a href="https://www.rangeradaeli.adv.br" target="_blank" rel="noopener noreferrer" class="footer__link">www.rangeradaeli.adv.br</a>
+        <p class="footer__addr">
+          Av. Nossa Sra. da Penha, 2053<br/>
+          Sala 1102, Praia do Canto<br/>
+          Vila Velha/ES – CEP 29101-130
+        </p>
       </div>
-    </footer>
 
-    <!-- Botão voltar ao topo -->
-    <button
-      class="back-to-top"
-      id="backToTop"
-      aria-label="Voltar ao topo"
-      aria-hidden="true"
-    >
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        aria-hidden="true"
-      >
-        <polyline points="18 15 12 9 6 15" />
-      </svg>
-    </button>
+    </div>
 
-    <script src="js/script.js"></script>
-    
-  </body>
+    <div class="footer__bottom">
+      <div class="container">
+        <p class="footer__copy">
+          &copy; <span id="currentYear"></span> Rangel Radaeli Advocacia. Todos os direitos reservados.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão voltar ao topo -->
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
 </html>
