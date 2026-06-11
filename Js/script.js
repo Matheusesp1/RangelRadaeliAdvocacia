@@ -195,27 +195,36 @@ function initContactForm() {
 
   if (!form) return;
 
+  const SERVICE_ID = "service_0dtbo2q";
+  const TEMPLATE_ID = "template_nm1y795";
+  const PUBLIC_KEY = "cX7j1uCZWBffdHsKI-W6C";
+
+  emailjs.init({
+    publicKey: PUBLIC_KEY,
+  });
   // Validação em tempo real ao sair de cada campo
   var fields = form.querySelectorAll(".form__input");
+
   fields.forEach(function (field) {
     field.addEventListener("blur", function () {
       validateField(field);
     });
 
-    // Remove estado de erro enquanto digita
     field.addEventListener("input", function () {
       field.classList.remove("is-error");
       var errorEl = document.getElementById(field.id + "-error");
-      if (errorEl) errorEl.textContent = "";
+
+      if (errorEl) {
+        errorEl.textContent = "";
+      }
     });
   });
 
-  // Envio do formulário
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    // Valida todos os campos obrigatórios
     var isValid = true;
+
     fields.forEach(function (field) {
       if (!validateField(field)) {
         isValid = false;
@@ -224,20 +233,33 @@ function initContactForm() {
 
     if (!isValid) return;
 
-    // Simula envio (substitua aqui pelo seu endpoint real)
     submitBtn.disabled = true;
-    submitBtn.textContent = "Enviando…";
+    submitBtn.textContent = "Enviando...";
 
-    setTimeout(function () {
-      showFeedback(
-        feedback,
-        "✓ Mensagem enviada! Entraremos em contato em breve.",
-        "success",
-      );
-      form.reset();
-      submitBtn.disabled = false;
-      submitBtn.textContent = "Enviar Mensagem";
-    }, 1500);
+    const templateParams = {
+      nome: document.getElementById("nome").value,
+      email: document.getElementById("email").value,
+      telefone: document.getElementById("telefone").value,
+      assunto: document.getElementById("assunto").value,
+      mensagem: document.getElementById("mensagem").value,
+    };
+
+    emailjs
+      .send(SERVICE_ID, TEMPLATE_ID, templateParams)
+      .then(function () {
+        showFeedback(feedback, "✓ Mensagem enviada com sucesso!", "success");
+
+        form.reset();
+      })
+      .catch(function (error) {
+        console.error(error);
+
+        showFeedback(feedback, "Erro ao enviar mensagem.", "error");
+      })
+      .finally(function () {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Enviar Mensagem";
+      });
   });
 }
 
