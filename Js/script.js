@@ -186,8 +186,14 @@ function initFadeInObserver() {
 }
 
 /* ================================================================
-   5. FORMULÁRIO DE CONTATO — Validação e feedback
+   5. FORMULÁRIO DE CONTATO — Validação, EmailJS e feedback
 ================================================================ */
+
+// Inicializa o EmailJS com sua Public Key
+(function () {
+  emailjs.init("0UpraUhT7mPKUtAG8");
+})();
+
 function initContactForm() {
   var form = document.getElementById("contactForm");
   var submitBtn = document.getElementById("submitBtn");
@@ -224,20 +230,33 @@ function initContactForm() {
 
     if (!isValid) return;
 
-    // Simula envio (substitua aqui pelo seu endpoint real)
+    // Trava o botão durante o envio
     submitBtn.disabled = true;
     submitBtn.textContent = "Enviando…";
 
-    setTimeout(function () {
-      showFeedback(
-        feedback,
-        "✓ Mensagem enviada! Entraremos em contato em breve.",
-        "success",
-      );
-      form.reset();
-      submitBtn.disabled = false;
-      submitBtn.textContent = "Enviar Mensagem";
-    }, 1500);
+    // Envio real via EmailJS
+    emailjs
+      .sendForm("service_0dtbo2q", "template_nm1y795", form)
+      .then(function () {
+        showFeedback(
+          feedback,
+          "✓ Mensagem enviada! Entraremos em contato em breve.",
+          "success",
+        );
+        form.reset();
+      })
+      .catch(function (error) {
+        console.error("Erro EmailJS:", error);
+        showFeedback(
+          feedback,
+          "✗ Erro ao enviar. Tente novamente ou contate por WhatsApp.",
+          "error",
+        );
+      })
+      .finally(function () {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Enviar Mensagem";
+      });
   });
 }
 
