@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Artigos jurídicos e publicações do escritório Rangel Radaeli Advocacia." />
+  <title>Artigos | Rangel Radaeli Advocacia</title>
+
+  <link rel="icon" type="image/png" href="assets/images/LogoRR2.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    /* ===== HERO DA PÁGINA DE ARTIGOS ===== */
+    .artigos-hero {
+      background-color: var(--color-petroleo);
+      padding: calc(var(--header-h) + var(--space-xl)) 0 var(--space-xl);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .artigos-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(184,145,97,0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .artigos-hero__inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .artigos-hero h1 {
+      font-family: var(--font-title);
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--color-white);
+      letter-spacing: 0.04em;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .artigos-hero h1 span {
+      color: var(--color-gold);
+    }
+
+    .artigos-hero p {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.6);
+      font-weight: 300;
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    .artigos-hero__bar {
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent 0%, var(--color-gold) 40%, var(--color-gold-light) 60%, transparent 100%);
+    }
+
+    /* ===== GRID DE CARDS ===== */
+    .artigos-section {
+      background-color: var(--color-cream);
+      padding: var(--space-2xl) 0;
+    }
+
+    .artigos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-sm);
+    }
+
+    .artigo-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-top: 3px solid var(--color-gold);
+      padding: var(--space-md);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      transition: transform var(--transition), box-shadow var(--transition);
+      text-decoration: none;
+      border-radius: var(--radius-md);
+    }
+
+    .artigo-card:hover {
+      box-shadow: 0 8px 32px rgba(8,27,29,0.1);
+      transform: translateY(-3px);
+    }
+
+    .artigo-card .tag {
+      font-family: var(--font-body);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+    }
+
+    .artigo-card h2 {
+      font-family: var(--font-title);
+      font-size: 0.95rem;
+      color: var(--color-petroleo);
+      line-height: 1.4;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .artigo-card p {
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      color: var(--color-text-muted);
+      line-height: 1.7;
+      font-weight: 400;
+      flex: 1;
+      margin-bottom: 0;
+    }
+
+    .artigo-card .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: var(--space-sm);
+      border-top: 1px solid var(--color-border);
+      margin-top: auto;
+    }
+
+    .artigo-card .data {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      color: var(--color-text-muted);
+      font-weight: 400;
+    }
+
+    .artigo-card .ler-mais {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--color-gold);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ===== RESPONSIVO ===== */
+    @media (max-width: 1024px) {
+      .artigos-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 640px) {
+      .artigos-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="Rangel Radaeli Advocacia – Início">
+        <div class="logo__wrapper">
+          <div class="logo__top">
+            <img src="assets/images/LogoRR.png" alt="" class="logo__icon" />
+            <div class="logo__text">
+              <span class="logo__name">Rangel Radaeli</span>
+              <span class="logo__sub">
+                <span class="logo__line"></span>
+                ADVOCACIA
+                <span class="logo__line"></span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Menu principal">
+        <ul class="nav__list">
+          <li><a href="index.html#sobre" class="nav__link">Sobre</a></li>
+          <li><a href="index.html#areas" class="nav__link">Áreas de Atuação</a></li>
+          <li><a href="index.html#diferenciais" class="nav__link">Diferenciais</a></li>
+          <li><a href="index.html#multidisciplinar" class="nav__link">Parceiros</a></li>
+          <li><a href="artigos.html" class="nav__link" style="color: var(--color-gold);">Artigos</a></li>
+          <li><a href="index.html#contato" class="nav__link nav__link--cta">Contato</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu" aria-expanded="false">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+
+    <nav class="nav-mobile" id="mobileMenu" aria-label="Menu mobile" aria-hidden="true">
+      <ul class="nav-mobile__list">
+        <li><a href="index.html#sobre" class="nav-mobile__link">Sobre</a></li>
+        <li><a href="index.html#areas" class="nav-mobile__link">Áreas de Atuação</a></li>
+        <li><a href="index.html#diferenciais" class="nav-mobile__link">Diferenciais</a></li>
+        <li><a href="index.html#multidisciplinar" class="nav-mobile__link">Parceiros</a></li>
+        <li><a href="artigos.html" class="nav-mobile__link" style="color: var(--color-gold);">Artigos</a></li>
+        <li><a href="index.html#contato" class="nav-mobile__link">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="artigos-hero">
+      <div class="container artigos-hero__inner">
+        <span class="section-tag">Publicações</span>
+        <h1>Artigos & <span>Notícias</span></h1>
+        <p>Reflexões jurídicas, atualizações legislativas e orientações práticas para o dia a dia.</p>
+      </div>
+      <div class="artigos-hero__bar" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== GRID DE ARTIGOS ===== -->
+    <section class="artigos-section">
+      <div class="container">
+        <div class="artigos-grid">
+
+          <!-- CARD 1 — artigo de exemplo -->
+          <a href="artigos/direito-trabalhista.html" class="artigo-card fade-in">
+            <span class="tag">Direito Trabalhista</span>
+            <h2>Direito Trabalhista: O que você precisa saber</h2>
+            <p>Conheça os principais direitos do trabalhador brasileiro e saiba como se proteger em situações de demissão, horas extras não pagas e assédio no trabalho.</p>
+            <div class="card-footer">
+              <span class="data">15 de junho de 2025</span>
+              <span class="ler-mais">Ler artigo →</span>
+            </div>
+          </a>
+
+          <!-- NOVOS CARDS VÃO AQUI -->
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="assets/images/logo-light.png" alt="Rangel Radaeli Advocacia" class="footer__logo"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+        <span class="footer__logo-fallback" style="display:none">
+          <span class="footer__logo-name">Rangel Radaeli</span>
+          <span class="footer__logo-sub">— ADVOCACIA —</span>
+        </span>
+        <p class="footer__tagline">Solidez para proteger.<br />Estratégia para crescer.<br />Confiança para construir o futuro.</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Links do rodapé">
+        <h4 class="footer__nav-title">Áreas de Atuação</h4>
+        <ul class="footer__nav-list">
+          <li><a href="index.html#areas" class="footer__link">Consultoria e Contratos</a></li>
+          <li><a href="index.html#areas" class="footer__link">Cobranças e Recuperação de Crédito</a></li>
+          <li><a href="index.html#areas" class="footer__link">Contencioso Estratégico</a></li>
+          <li><a href="index.html#areas" class="footer__link">Direito do Trabalho</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__contact">
+        <h4 class="footer__nav-title">Contato</h4>
+        <a href="https://wa.me/5527988626096" target="_blank" rel="noopener noreferrer" class="footer__link">(27) 98862-6096</a>
+        <a href="https://mail.google.com/mail/?view=cm&to=rangelradaeli.adv@gmail.com" target="_blank" rel="noopener noreferrer" class="footer__link">rangelradaeli.adv@gmail.com</a>
+        <a href="https://rangelradaeliadvocacia.com.br" target="_blank" rel="noopener noreferrer" class="footer__link">www.rangelradaeliadvocacia.com.br</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p class="footer__copy">&copy; <span id="currentYear"></span> Rangel Radaeli Advocacia. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15" />
+    </svg>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="Js/script.js"></script>
+  <script>
+    // Ativa fade-in nos cards de artigo
+    document.addEventListener("DOMContentLoaded", function () {
+      var cards = document.querySelectorAll(".artigo-card");
+      if (!("IntersectionObserver" in window)) {
+        cards.forEach(function (el) { el.classList.add("is-visible"); });
+        return;
+      }
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      cards.forEach(function (el) { obs.observe(el); });
+    });
+  </script>
+</body>
+</html>

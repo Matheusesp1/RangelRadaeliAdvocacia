@@ -1,0 +1,22 @@
+backend:
+  name: github
+  repo: Matheusesp1/RangelRadaeliAdvocacia  # ← trocar pelo usuário e repo correto
+  branch: main
+
+media_folder: assets/uploads
+
+collections:
+  - name: artigos
+    label: Artigos
+    label_singular: Artigo
+    folder: artigos
+    create: true
+    slug: "{{slug}}"
+    extension: html
+    format: frontmatter
+    fields:
+      - { label: Título, name: title, widget: string }
+      - { label: Data de Publicação, name: date, widget: datetime, format: "DD [de] MMMM [de] YYYY", date_format: "DD/MM/YYYY", time_format: false }
+      - { label: Categoria, name: categoria, widget: string, hint: "Ex: Direito Trabalhista, Direito de Família..." }
+      - { label: Resumo, name: resumo, widget: text, hint: "Aparece no card da listagem (máx. 200 caracteres)" }
+      - { label: Conteúdo, name: body, widget: markdown }

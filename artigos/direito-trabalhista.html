@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Conheça os principais direitos do trabalhador brasileiro." />
+  <title>Direito Trabalhista: O que você precisa saber | Rangel Radaeli Advocacia</title>
+
+  <link rel="icon" type="image/png" href="../assets/images/LogoRR2.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <style>
+    /* ===== HERO DO ARTIGO ===== */
+    .artigo-hero {
+      background-color: var(--color-petroleo);
+      padding: calc(var(--header-h) + var(--space-xl)) 0 var(--space-xl);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .artigo-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(184,145,97,0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .artigo-hero__inner { position: relative; z-index: 1; }
+
+    .artigo-hero .categoria {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-petroleo);
+      background: var(--color-gold);
+      padding: 4px 14px;
+      margin-bottom: 1.25rem;
+      border-radius: var(--radius-sm);
+    }
+
+    .artigo-hero h1 {
+      font-family: var(--font-title);
+      font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+      color: var(--color-white);
+      line-height: 1.25;
+      max-width: 700px;
+      margin: 0 auto 1rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .artigo-hero .meta {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.45);
+      font-weight: 400;
+    }
+
+    .artigo-hero__bar {
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent 0%, var(--color-gold) 40%, var(--color-gold-light) 60%, transparent 100%);
+    }
+
+    /* ===== CORPO DO ARTIGO ===== */
+    .artigo-body {
+      background-color: var(--color-cream);
+      padding: var(--space-2xl) 0;
+    }
+
+    .artigo-layout {
+      display: grid;
+      grid-template-columns: 680px 1fr;
+      gap: var(--space-xl);
+      align-items: start;
+    }
+
+    .artigo-content .voltar {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--color-gold);
+      letter-spacing: 0.06em;
+      margin-bottom: var(--space-lg);
+      transition: opacity var(--transition);
+    }
+
+    .artigo-content .voltar:hover { opacity: 0.7; }
+
+    .artigo-content p {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+      line-height: 1.9;
+      margin-bottom: var(--space-md);
+    }
+
+    .artigo-content h2 {
+      font-family: var(--font-title);
+      font-size: 1.2rem;
+      color: var(--color-petroleo);
+      font-weight: 600;
+      margin: var(--space-xl) 0 var(--space-sm);
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--color-gold);
+      letter-spacing: 0.03em;
+    }
+
+    .artigo-content h3 {
+      font-family: var(--font-title);
+      font-size: 0.95rem;
+      color: var(--color-petroleo);
+      font-weight: 600;
+      margin: var(--space-md) 0 0.5rem;
+    }
+
+    .artigo-content ul,
+    .artigo-content ol {
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      color: var(--color-text-muted);
+      line-height: 1.85;
+      padding-left: 1.25rem;
+      margin-bottom: var(--space-md);
+    }
+
+    .artigo-content li { margin-bottom: 0.5rem; }
+
+    .artigo-content blockquote {
+      border-left: 3px solid var(--color-gold);
+      padding: 1rem 1.25rem;
+      margin: var(--space-lg) 0;
+      background: var(--color-white);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      font-style: italic;
+      line-height: 1.75;
+    }
+
+    /* ===== SIDEBAR ===== */
+    .artigo-sidebar {
+      position: sticky;
+      top: calc(var(--header-h) + 2rem);
+    }
+
+    .sidebar-card {
+      background: var(--color-petroleo);
+      border-top: 3px solid var(--color-gold);
+      border-radius: var(--radius-md);
+      padding: var(--space-md);
+      margin-bottom: var(--space-sm);
+    }
+
+    .sidebar-card p {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.7;
+      margin-bottom: var(--space-sm);
+    }
+
+    .sidebar-card .btn {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .sidebar-title {
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      margin-bottom: var(--space-sm);
+    }
+
+    /* ===== RESPONSIVO ===== */
+    @media (max-width: 1024px) {
+      .artigo-layout {
+        grid-template-columns: 1fr;
+      }
+      .artigo-sidebar {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="../index.html" class="logo" aria-label="Rangel Radaeli Advocacia – Início">
+        <div class="logo__wrapper">
+          <div class="logo__top">
+            <img src="../assets/images/LogoRR.png" alt="" class="logo__icon" />
+            <div class="logo__text">
+              <span class="logo__name">Rangel Radaeli</span>
+              <span class="logo__sub">
+                <span class="logo__line"></span>
+                ADVOCACIA
+                <span class="logo__line"></span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Menu principal">
+        <ul class="nav__list">
+          <li><a href="../index.html#sobre" class="nav__link">Sobre</a></li>
+          <li><a href="../index.html#areas" class="nav__link">Áreas de Atuação</a></li>
+          <li><a href="../index.html#diferenciais" class="nav__link">Diferenciais</a></li>
+          <li><a href="../index.html#multidisciplinar" class="nav__link">Parceiros</a></li>
+          <li><a href="../artigos.html" class="nav__link" style="color: var(--color-gold);">Artigos</a></li>
+          <li><a href="../index.html#contato" class="nav__link nav__link--cta">Contato</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu" aria-expanded="false">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+
+    <nav class="nav-mobile" id="mobileMenu" aria-label="Menu mobile" aria-hidden="true">
+      <ul class="nav-mobile__list">
+        <li><a href="../index.html#sobre" class="nav-mobile__link">Sobre</a></li>
+        <li><a href="../index.html#areas" class="nav-mobile__link">Áreas de Atuação</a></li>
+        <li><a href="../index.html#diferenciais" class="nav-mobile__link">Diferenciais</a></li>
+        <li><a href="../index.html#multidisciplinar" class="nav-mobile__link">Parceiros</a></li>
+        <li><a href="../artigos.html" class="nav-mobile__link" style="color: var(--color-gold);">Artigos</a></li>
+        <li><a href="../index.html#contato" class="nav-mobile__link">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="artigo-hero">
+      <div class="container artigo-hero__inner">
+        <span class="categoria">Direito Trabalhista</span>
+        <h1>Direito Trabalhista: O que você precisa saber</h1>
+        <p class="meta">15 de junho de 2025 · Rangel Radaeli</p>
+      </div>
+      <div class="artigo-hero__bar" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== CORPO ===== -->
+    <section class="artigo-body">
+      <div class="container">
+        <div class="artigo-layout">
+
+          <!-- CONTEÚDO PRINCIPAL -->
+          <article class="artigo-content">
+            <a href="../artigos.html" class="voltar">← Voltar para Artigos</a>
+
+            <p>
+              O Direito Trabalhista brasileiro é um dos mais completos do mundo, garantindo ao trabalhador
+              uma série de proteções que vão desde o momento da contratação até após o desligamento da empresa.
+              Conhecer esses direitos é o primeiro passo para se proteger de abusos e garantir o que é seu por lei.
+            </p>
+
+            <h2>Quais são os principais direitos do trabalhador?</h2>
+
+            <p>
+              A Consolidação das Leis do Trabalho (CLT), criada em 1943 e atualizada diversas vezes desde então,
+              é o principal instrumento de proteção do trabalhador no Brasil. Entre os direitos mais relevantes, destacam-se:
+            </p>
+
+            <ul>
+              <li>Salário mínimo nacional e piso da categoria</li>
+              <li>13º salário proporcional</li>
+              <li>Férias remuneradas com adicional de um terço</li>
+              <li>FGTS (Fundo de Garantia por Tempo de Serviço)</li>
+              <li>Aviso prévio em caso de demissão</li>
+              <li>Limite de 8 horas diárias e 44 horas semanais</li>
+              <li>Adicional de horas extras de no mínimo 50%</li>
+              <li>Licença maternidade e paternidade</li>
+            </ul>
+
+            <h2>O que fazer em caso de demissão sem justa causa?</h2>
+
+            <p>
+              A demissão sem justa causa gera ao trabalhador uma série de verbas rescisórias que devem ser
+              pagas pelo empregador no prazo de dez dias a contar da data do término do contrato. O não
+              cumprimento desse prazo gera multa sobre o total da rescisão.
+            </p>
+
+            <p>
+              As verbas mais comuns incluem saldo de salário, aviso prévio (trabalhado ou indenizado),
+              férias proporcionais e vencidas com o adicional de um terço, 13º salário proporcional,
+              e multa de 40% sobre o saldo do FGTS.
+            </p>
+
+            <blockquote>
+              O trabalhador que não receber suas verbas rescisórias corretamente pode e deve buscar seus
+              direitos na Justiça do Trabalho. O prazo para ingressar com a ação é de até dois anos após
+              o término do contrato de trabalho.
+            </blockquote>
+
+            <h2>Assédio moral e sexual no ambiente de trabalho</h2>
+
+            <p>
+              O assédio no trabalho é uma realidade que afeta milhares de trabalhadores brasileiros e pode
+              gerar consequências sérias para a saúde mental e física da vítima. É importante saber que
+              tanto o assédio moral quanto o sexual são práticas ilegais e passíveis de indenização.
+            </p>
+
+            <p>
+              Caso você esteja passando por essa situação, o recomendado é documentar tudo: guardar
+              mensagens, e-mails, registrar testemunhas e, principalmente, buscar orientação jurídica
+              especializada o quanto antes.
+            </p>
+
+            <h2>Quando procurar um advogado trabalhista?</h2>
+
+            <p>
+              Sempre que você sentir que seus direitos estão sendo desrespeitados, é hora de buscar apoio
+              especializado. Não espere a situação piorar. Um advogado trabalhista pode avaliar seu caso,
+              orientar sobre as melhores estratégias e representar seus interesses perante a Justiça do Trabalho
+              com segurança e eficiência.
+            </p>
+          </article>
+
+          <!-- SIDEBAR -->
+          <aside class="artigo-sidebar">
+            <div class="sidebar-card">
+              <p class="sidebar-title">Fale com o escritório</p>
+              <p>Tem dúvidas sobre seus direitos trabalhistas? Agende uma consulta.</p>
+              <a href="https://wa.me/5527988626096?text=Olá! Gostaria de mais informações sobre Direito Trabalhista."
+                class="btn btn--primary" target="_blank" rel="noopener">
+                Falar pelo WhatsApp
+              </a>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="../assets/images/logo-light.png" alt="Rangel Radaeli Advocacia" class="footer__logo"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+        <span class="footer__logo-fallback" style="display:none">
+          <span class="footer__logo-name">Rangel Radaeli</span>
+          <span class="footer__logo-sub">— ADVOCACIA —</span>
+        </span>
+        <p class="footer__tagline">Solidez para proteger.<br />Estratégia para crescer.<br />Confiança para construir o futuro.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Links do rodapé">
+        <h4 class="footer__nav-title">Áreas de Atuação</h4>
+        <ul class="footer__nav-list">
+          <li><a href="../index.html#areas" class="footer__link">Consultoria e Contratos</a></li>
+          <li><a href="../index.html#areas" class="footer__link">Cobranças e Recuperação de Crédito</a></li>
+          <li><a href="../index.html#areas" class="footer__link">Contencioso Estratégico</a></li>
+          <li><a href="../index.html#areas" class="footer__link">Direito do Trabalho</a></li>
+        </ul>
+      </nav>
+      <div class="footer__contact">
+        <h4 class="footer__nav-title">Contato</h4>
+        <a href="https://wa.me/5527988626096" target="_blank" rel="noopener noreferrer" class="footer__link">(27) 98862-6096</a>
+        <a href="https://mail.google.com/mail/?view=cm&to=rangelradaeli.adv@gmail.com" target="_blank" rel="noopener noreferrer" class="footer__link">rangelradaeli.adv@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p class="footer__copy">&copy; <span id="currentYear"></span> Rangel Radaeli Advocacia. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15" />
+    </svg>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="../Js/script.js"></script>
+</body>
+</html>
